@@ -1,5 +1,6 @@
 package com.mab.sbquickstart.topic;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,16 +10,13 @@ import java.util.List;
 @RestController
 public class TopicController {
 
+    @Autowired
+    private TopicService topicService;
+
     @RequestMapping("/topics")
     public List<Topic> getAllTopics(){
 
-        return Arrays.asList(
-                new Topic("premier","first","un"),
-                new Topic("second","second","deux"),
-                new Topic("troisieme","third","trois"),
-                new Topic("quatrieme","fourth","quatre")
-        );
+        return  topicService.getTopics();
     }
-
 
 }
