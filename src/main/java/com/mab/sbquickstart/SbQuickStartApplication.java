@@ -8,7 +8,6 @@ public class SbQuickStartApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SbQuickStartApplication.class, args);
-        System.out.println("A que coucou");
     }
 
 }
