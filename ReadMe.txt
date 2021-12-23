@@ -6,3 +6,5 @@ https://www.youtube.com/watch?v=AI2oBJkPK3c&list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8Xe
 21-12-2021 : Spring Boot Quick Start 17 - Creating a business service
 21-12-2021 : Spring Boot Quick Start 18 - Getting a single resource
 23-12-2021 : Spring Boot Quick Start 19 - Creating a new resource using POST
+23-12-2021 : Spring Boot Quick Start 20 - Implementing Update and Delete
+
