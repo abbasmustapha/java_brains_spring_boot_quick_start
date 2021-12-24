@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class TopicController {
@@ -13,11 +14,11 @@ public class TopicController {
 
     @RequestMapping("/topics")
     public List<Topic> getAllTopics(){
-        return  topicService.getTopics();
+        return  topicService.getAllTopics();
     }
 
     @RequestMapping("/topics/{id}")
-    public Topic getTopic(@PathVariable(name = "id") String id){
+    public Optional<Topic> getTopic(@PathVariable(name = "id") String id){
         return topicService.getTopic(id);
     }
 
@@ -26,9 +27,9 @@ public class TopicController {
         topicService.addTopic(topic);
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/topics/{id}")
-    public void updateTopic(@RequestBody Topic topic,@PathVariable(name = "id") String id) {
-        topicService.updateTopic(id,topic);
+    @RequestMapping(method = RequestMethod.PUT, value = "/topics")
+    public void updateTopic(@RequestBody Topic topic) {
+        topicService.updateTopic(topic);
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/topics/{id}")
