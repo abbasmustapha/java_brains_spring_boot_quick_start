@@ -1,23 +1,29 @@
-package com.mab.courseapidata.topic;
+package com.mab.courseapidata.course;
+
+import com.mab.courseapidata.topic.Topic;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
-public class Topic {
+public class Course {
 
     @Id
     private String id;
     private String name;
     private String description;
+    @ManyToOne
+    private Topic topic;
 
     // -----  Constructors
-    public Topic() {    }
+    public Course() {    }
 
-    public Topic(String id, String name, String description) {
+    public Course(String id, String name, String description, String topicId) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.topic = new Topic(topicId,"","");
     }
 
     // ----- Getters and Setters
@@ -39,6 +45,8 @@ public class Topic {
     public void setDescription(String description) {
         this.description = description;
     }
+    public Topic getTopic() { return topic;}
+    public void setTopic(Topic topic) { this.topic = topic;}
 
     // ----- ToString
     @Override
@@ -47,6 +55,7 @@ public class Topic {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
+                ", topic=" + topic +
                 '}';
     }
 

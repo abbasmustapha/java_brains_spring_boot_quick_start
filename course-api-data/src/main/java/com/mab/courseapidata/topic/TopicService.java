@@ -14,13 +14,13 @@ public class TopicService {
     private TopicRepository topicRepository;
 
     /*
-    private List<Topic> topics = new ArrayList<>(Arrays.asList(
-            new Topic("1","first","un"),
-            new Topic("2","second","deux"),
-            new Topic("3","third","trois")
+    private List<Course> topics = new ArrayList<>(Arrays.asList(
+            new Course("1","first","un"),
+            new Course("2","second","deux"),
+            new Course("3","third","trois")
         ));
      */
-    // private List<Topic> topics = new ArrayList<>();
+    // private List<Course> topics = new ArrayList<>();
 
     public List<Topic> getAllTopics(){
         List<Topic> topics = new ArrayList<>();

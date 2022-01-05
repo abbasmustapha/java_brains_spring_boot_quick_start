@@ -9,4 +9,4 @@ topics::add  (method references) et lambda expressions  ==->  Voir le cours :  J
 21-12-2021 : Spring Boot Quick Start 18 - Getting a single resource
 23-12-2021 : Spring Boot Quick Start 19 - Creating a new resource using POST
 23-12-2021 : Spring Boot Quick Start 20 - Implementing Update and Delete
-
+06-01-2021 : Spring Boot Quick Start 31 - Adding Entity Relationship and Extending Repository
